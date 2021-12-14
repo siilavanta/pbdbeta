@@ -83,7 +83,7 @@
     }
 
     var aboutApp = document.getElementById('main')
-    //localStorage['abountapp'] = aboutApp.innerHTML
+    localStorage['abountapp'] = aboutApp.innerHTML
     if(localStorage['aboutapp'] !== ''){
          aboutApp.innerHTML = JSON.parse(localStorage['aboutapp'])
     }
