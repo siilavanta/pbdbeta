@@ -76,11 +76,8 @@
             loadFromServer("https://raw.githubusercontent.com/siilavanta/pbd/beta/aboutour.js");
         }
         var aboutOur = document.getElementById('main')
-       
-    localStorage['aboutour'] = aboutApp.innerHTML
-        if (localStorage['aboutour'] !== '') {
-            aboutOur.innerHTML = JSON.parse(localStorage['aboutour'])
-        }
+  
+      localStorage['aboutour'] = JSON.stringify(aboutOur.innerHTML)
     </script>
 </body>
 
