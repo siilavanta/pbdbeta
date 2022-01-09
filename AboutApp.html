@@ -40,6 +40,9 @@
                 #privacy{
                     margin: 10px;
                 }
+                #copyright{
+                text-align: center;
+                }
             </style>
 <h2>অ্যাপটি সম্পর্কে</h2>
 <p>ভদন্ত শান্তরক্ষিত মহাস্থবির কর্তৃক সংকলিত পালি-বাংলা অভিধান ১ম ও ২য় খণ্ড একত্র করে এই “পালি-বাংলা অভিধান (বিটা)”
@@ -90,6 +93,7 @@
         </div>
         
         <a id="privacy" href="https://siilavanta.github.io/pbdbeta/privacy.html"> গোপনীয়তা নীতি</a>
+<p id="copyright">© 2022-<span id="copytarget">Developer</span> All right reserved.</p>
 
 
         
@@ -97,6 +101,8 @@
 
     <script>
 
+var d = new Date()
+document.getElementById('copytarget').innerHTML = d.getFullYear()
         localStorage['device'] = 'android'
         var navitem = document.querySelectorAll('.navitem')
         navitem[0].addEventListener('click', () => {
