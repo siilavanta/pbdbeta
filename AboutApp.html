@@ -236,9 +236,10 @@
             <p> </p>
             <h2>অ্যাপটির সংস্করণ তথ্য</h2>
             <p>পালি-বাংলা অভিধান (বিটা)</p>
-            <p>বর্তমান ভার্সন: ১.১.৪</p>
-            <p>মোট শব্দ: ৪৩,৭৯৬টি</p>
-            <p>প্রকাশকাল: ১৪/০১/২০২২ খ্রিষ্টাব্দ</p>
+            <p id="versionName">বর্তমান ভার্সন: ১.১.৪</p>
+            <p id="totalLength">মোট শব্দ: ৪৩,৭৯৬টি</p>
+            <!-- <p>প্রকাশকাল: ১৪/০১/২০২২ খ্রিষ্টাব্দ</p> -->
+            <p>প্রকাশকাল:  ৩০/০৮/২০২৪ খ্রিষ্টাব্দ</p>
             <p> </p>
             <p> </p>
             <h2>অ্যাপটির মূল রিসোর্স</h2>
@@ -306,6 +307,16 @@
                 window.history.back()
             }
         })
+
+        const versionName = document.getElementById('versionName')
+        const totalLength = document.getElementById('totalLength')
+
+        window.addEventListener('DOMContentLoaded', ()=>{
+            versionName.innerHTML = "বর্তমান ভার্সন: " + Android.getVersionName()
+
+            totalLength.innerHTML = "মোট শব্দ: " + Android.getLength()
+        })
+
 
     </script>
     <script>
