@@ -311,10 +311,14 @@
         const versionName = document.getElementById('versionName')
         const totalLength = document.getElementById('totalLength')
 
-        window.addEventListener('DOMContentLoaded', ()=>{
-            versionName.innerHTML = "বর্তমান ভার্সন: " + Android.getVersionName()
+        window.addEventListener('DOMContentLoaded', () => {
+            try {
+                versionName.innerHTML = "বর্তমান ভার্সন: " + Android.getVersionName()
 
-            totalLength.innerHTML = "মোট শব্দ: " + Android.getLength()
+                totalLength.innerHTML = "মোট শব্দ: " + Android.getLength()
+            } catch (error) {
+
+            }
         })
 
 
