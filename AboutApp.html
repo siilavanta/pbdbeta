@@ -311,11 +311,11 @@
         const versionName = document.getElementById('versionName')
         const totalLength = document.getElementById('totalLength')
 
-        window.addEventListener('DOMContentLoaded', () => {
+          window.addEventListener('DOMContentLoaded', () => {
             try {
-                versionName.innerHTML = "বর্তমান ভার্সন: " + Android.getVersionName()
+                versionName.innerHTML = "বর্তমান ভার্সন: " + Android.getVersionName() == undefined ? '১.১.৪' : Android.getVersionName()
 
-                totalLength.innerHTML = "মোট শব্দ: " + Android.getLength()
+                totalLength.innerHTML = "মোট শব্দ: " + Android.getLength() == undefined ? '৪৩,৭৯৬টি' : Android.getLength()
             } catch (error) {
 
             }
